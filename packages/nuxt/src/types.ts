@@ -22,7 +22,7 @@ declare module '@nuxt/types' {
 	}
 }
 
-// @ts-expect-error: #app resolved by Nuxt3
+// @ts-expect-error: resolved by Nuxt3
 declare module '@nuxt/schema' {
 	interface NuxtConfig {
 		directus?: DirectusNuxtOptions;

@@ -11,11 +11,6 @@ const directusModule: Module<DirectusNuxtOptions> = function (moduleOptions) {
 	// Merge options from directus in nuxt.config & module options
 	const options = defu(nuxt.options.directus, moduleOptions);
 
-	// Transpile and alias runtime
-	const runtimeDir = resolve(__dirname, 'runtime');
-	this.nuxt.options.alias['~directus'] = runtimeDir;
-	this.nuxt.options.build.transpile.push(runtimeDir, '@directus/nuxt');
-
 	// Add directus nuxt plugin
 	this.addPlugin({
 		src: resolve(__dirname, './templates/plugin.mjs'),
