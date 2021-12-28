@@ -1,0 +1,44 @@
+{
+	"name": "@directus/nuxt",
+	"version": "9.4.0",
+	"description": "Directus module for Nuxt",
+	"keywords": [
+		"directus",
+		"nuxt",
+		"nuxt-module"
+	],
+	"bugs": {
+		"url": "https://github.com/directus/directus/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/directus/directus.git",
+		"directory": "packages/nuxt"
+	},
+	"license": "MIT",
+	"sideEffects": false,
+	"exports": {
+		".": {
+			"require": "./dist/module.js",
+			"import": "./dist/module.es.js"
+		},
+		"./templates/*": "./dist/templates/*"
+	},
+	"main": "./dist/module.js",
+	"types": "./dist/module.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "siroc build && mkdist --src src/templates --dist dist/templates"
+	},
+	"dependencies": {
+		"@directus/sdk": "9.4.0",
+		"consola": "2.15.3",
+		"defu": "5.0.0"
+	},
+	"devDependencies": {
+		"@nuxt/types": "^2.15.8",
+		"siroc": "^0.16.0"
+	}
+}
