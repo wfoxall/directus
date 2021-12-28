@@ -30,7 +30,7 @@
 		"dist"
 	],
 	"scripts": {
-		"build": "siroc build && mkdist --src src/templates --dist dist/templates"
+		"build": "siroc build"
 	},
 	"dependencies": {
 		"@directus/sdk": "9.4.0",
